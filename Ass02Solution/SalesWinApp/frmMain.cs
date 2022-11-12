@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-	public partial class frmMain : Form
-	{
-		public frmMain()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class frmMain : Form
+    {
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+    }
 }

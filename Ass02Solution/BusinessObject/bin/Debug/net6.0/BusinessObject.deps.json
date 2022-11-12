@@ -8,10 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "BusinessObject/1.0.0": {
         "dependencies": {
-          "Microsoft.Data.SqlClient": "5.0.1",
+          "DataValidation": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
@@ -195,11 +194,6 @@
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51807"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/7.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "7.0.0"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -775,6 +769,11 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "DataValidation/1.0.0": {
+        "runtime": {
+          "DataValidation.dll": {}
+        }
       }
     }
   },
@@ -874,13 +873,6 @@
       "sha512": "sha512-+43PF5c5s8VQQl1ZKCQmkRGA/C1agHki31DgJGS0In+KI/xiUanqN3Z8v4BKTWBQYG3W9/me7Z199gOX6OKb+g==",
       "path": "microsoft.entityframeworkcore.sqlserver/7.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.7.0.0.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-DtLJ0usm8NdPbRDxvNUBAYgnvqhodr/HPb461I+jrgHw5ZKF0vRTaokNth2Zy9xiw1ZTpT4c+S40f7AHWakODg==",
-      "path": "microsoft.entityframeworkcore.tools/7.0.0",
-      "hashPath": "microsoft.entityframeworkcore.tools.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",
@@ -1301,6 +1293,11 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "DataValidation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

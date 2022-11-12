@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-	public partial class frmLogin : Form
-	{
-		public frmLogin()
-		{
-			InitializeComponent();
-		}
-
-		private void btnCancel_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-	}
+    public partial class frmLogin : Form
+    {
+        public frmLogin()
+        {
+            InitializeComponent();
+        }
+    }
 }

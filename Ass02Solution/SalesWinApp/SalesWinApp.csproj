@@ -9,13 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="CategoryUI\" />
     <Folder Include="MemberUI\" />
     <Folder Include="ProductUI\" />
+    <Folder Include="Presenter\" />
     <Folder Include="OrderUI\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
 </Project>
