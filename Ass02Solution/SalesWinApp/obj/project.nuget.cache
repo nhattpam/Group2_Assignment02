@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PdqEp7Q/xZo/DlZuGGd83tO5dBiur3TJ5WHV4V1eOqlhYmPPFP6Av32WNbG/qgOW01NWr01D+aX+kLCqXLozJA==",
+  "dgSpecHash": "urY31mmwbq7RJb2bqdOWgMFbtHGrTa266N1s7BajRF4N1rDocoxgGlK6qt/+iGYzgN/Wzb61msvvz0D7OWBNJA==",
   "success": true,
-  "projectFilePath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\K16_FPT_SE161548\\MATERIALS_FPT\\SEMESTER_5\\PRN211\\GIT\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
