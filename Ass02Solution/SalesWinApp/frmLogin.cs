@@ -3,6 +3,7 @@ using BusinessObject;
 using DataAccess.Repository.CartRepo;
 using DataAccess.Repository.MemberRepo;
 using SalesWinApp.Presenter;
+using SalesWinApp.ProductUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,6 +64,15 @@ namespace SalesWinApp
                 else
                 {
                     //user ton tai
+                    frmProductsManagement frmProductsManagement = new frmProductsManagement()
+                    {
+                        LoginMember = memberPresenter,
+                        MemberRepository = memberRepository,
+                        CartRepository = this.cartRepository
+                    };
+                    frmProductsManagement.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    frmProductsManagement.Show();
                 }
             }
             else //sai username or pass

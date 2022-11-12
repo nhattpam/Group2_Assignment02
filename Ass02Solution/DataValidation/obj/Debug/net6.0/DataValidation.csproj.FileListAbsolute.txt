@@ -34,3 +34,15 @@ C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Sol
 C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\refint\DataValidation.dll
 C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.pdb
 C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\ref\DataValidation.dll
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.deps.json
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.dll
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.pdb
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.csproj.AssemblyReference.cache
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.AssemblyInfoInputs.cache
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.AssemblyInfo.cs
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.csproj.CoreCompileInputs.cache
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.dll
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\refint\DataValidation.dll
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.pdb
+D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\ref\DataValidation.dll
