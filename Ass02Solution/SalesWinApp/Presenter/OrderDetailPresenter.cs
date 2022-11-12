@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Repository.ProductRepo
+namespace SalesWinApp.Presenter
 {
-    public interface IProductRepository
+    internal class OrderDetailPresenter
     {
     }
 }

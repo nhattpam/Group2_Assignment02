@@ -4,6 +4,214 @@
     "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {}
   },
   "projects": {
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectName": "BusinessObject",
+        "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+        "projectName": "DataValidation",
+        "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -32,7 +240,17 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+              },
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataAccess\\DataAccess.csproj"
+              },
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -44,6 +262,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
