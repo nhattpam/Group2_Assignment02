@@ -39,49 +39,58 @@ namespace SalesWinApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string Email = txtEmail.Text;
-            string Password = txtPassword.Text;
-            Member loginMember = memberRepository.Login(Email, Password);
-            MemberPresenter memberPresenter = mapper.Map<MemberPresenter>(loginMember);
-            if (loginMember != null)
+            try
             {
-                MessageBox.Show("Login successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string memberName = loginMember.Fullname;
-                if (memberName.Equals("Admin"))
+                string Email = txtEmail.Text;
+                string Password = txtPassword.Text;
+                Member loginMember = memberRepository.Login(Email, Password);
+                MemberPresenter memberPresenter = mapper.Map<MemberPresenter>(loginMember);
+                if (loginMember != null)
                 {
-                    //MessageBox.Show("day la admin");
-                    frmMain frmMain = null;
-                    frmMain = new frmMain
+                    MessageBox.Show("Login successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string memberName = loginMember.Fullname;
+                    if (memberName.Equals("Admin"))
                     {
-                        LoginMember = memberPresenter,
-                        MemberRepository = memberRepository,
-                        CartRepository = this.cartRepository
-                    };
-                    frmMain.Closed += (s, args) => this.Close();
-                    this.Hide();
-                    frmMain.Show(); //neu la admin thi hien thi main
+                        //MessageBox.Show("day la admin");
+                        frmMain frmMain = null;
+                        frmMain = new frmMain
+                        {
+                            LoginMember = memberPresenter,
+                            MemberRepository = memberRepository,
+                            CartRepository = this.cartRepository
+                        };
+                        frmMain.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        frmMain.Show(); //neu la admin thi hien thi main
+                    }
+                    else
+                    {
+                        //user ton tai
+                        frmProductsManagement frmProductsManagement = new frmProductsManagement()
+                        {
+                            LoginMember = memberPresenter,
+                            MemberRepository = memberRepository,
+                            CartRepository = this.cartRepository
+                        };
+                        frmProductsManagement.Closed += (s, args) => this.Close();
+                        this.Hide();
+                        frmProductsManagement.Show();
+                    }
                 }
-                else
+                else //sai username or pass
                 {
-                    //user ton tai
-                    frmProductsManagement frmProductsManagement = new frmProductsManagement()
+                    if (MessageBox.Show("Login failed!!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
                     {
-                        LoginMember = memberPresenter,
-                        MemberRepository = memberRepository,
-                        CartRepository = this.cartRepository
-                    };
-                    frmProductsManagement.Closed += (s, args) => this.Close();
-                    this.Hide();
-                    frmProductsManagement.Show();
+                        Close();
+                    }
                 }
             }
-            else //sai username or pass
+            catch (Exception ex)
             {
-                if (MessageBox.Show("Login failed!!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-                {
-                    Close();
-                }
+
+                MessageBox.Show(ex.Message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

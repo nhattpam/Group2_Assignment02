@@ -1,5 +1,8 @@
-﻿using DataAccess.Repository.CartRepo;
+﻿using AutoMapper;
+using BusinessObject;
+using DataAccess.Repository.CartRepo;
 using DataAccess.Repository.MemberRepo;
+using DataAccess.Repository.OrderDetailRepo;
 using DataAccess.Repository.ProductRepo;
 using SalesWinApp.Presenter;
 using System;
@@ -21,9 +24,29 @@ namespace SalesWinApp.ProductUI
 
         IProductRepository productRepository = new ProductRepository();
         public ICartRepository CartRepository { get; set; }
+
+        BindingSource source;
+        bool search = false;
+        bool filter = false;
+
+        IEnumerable<Product> dataSource;
+        IEnumerable<Product> searchResult;
+        IEnumerable<Product> filterResult;
+
+        private IMapper mapper;
+        private IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+
+
         public frmProductsManagement()
         {
             InitializeComponent();
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MappingProfile());
+            });
+            mapper = config.CreateMapper();
         }
+
+
     }
 }

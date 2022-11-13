@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="CategoryUI\" />
-    <Folder Include="OrderUI\" />
   </ItemGroup>
 
   <ItemGroup>

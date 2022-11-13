@@ -46,3 +46,15 @@ D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\o
 D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\refint\DataValidation.dll
 D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.pdb
 D:\Fall2022\PRN211\Assignment\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\ref\DataValidation.dll
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.deps.json
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.dll
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\bin\Debug\net6.0\DataValidation.pdb
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.csproj.AssemblyReference.cache
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.GeneratedMSBuildEditorConfig.editorconfig
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.AssemblyInfoInputs.cache
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.AssemblyInfo.cs
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.csproj.CoreCompileInputs.cache
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.dll
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\refint\DataValidation.dll
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\DataValidation.pdb
+D:\SWR\Group2_Assignment02\Ass02Solution\DataValidation\obj\Debug\net6.0\ref\DataValidation.dll

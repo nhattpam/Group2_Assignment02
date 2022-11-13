@@ -41,6 +41,7 @@
             this.btnOrderManagement.TabIndex = 6;
             this.btnOrderManagement.Text = "&Order Management";
             this.btnOrderManagement.UseVisualStyleBackColor = true;
+            this.btnOrderManagement.Click += new System.EventHandler(this.btnOrderManagement_Click);
             // 
             // btnProductManagement
             // 
@@ -50,6 +51,7 @@
             this.btnProductManagement.TabIndex = 5;
             this.btnProductManagement.Text = "&Product Management";
             this.btnProductManagement.UseVisualStyleBackColor = true;
+            this.btnProductManagement.Click += new System.EventHandler(this.btnProductManagement_Click);
             // 
             // btnMemberManagement
             // 
@@ -59,6 +61,7 @@
             this.btnMemberManagement.TabIndex = 4;
             this.btnMemberManagement.Text = "&Member Management";
             this.btnMemberManagement.UseVisualStyleBackColor = true;
+            this.btnMemberManagement.Click += new System.EventHandler(this.btnMemberManagement_Click);
             // 
             // frmMain
             // 
