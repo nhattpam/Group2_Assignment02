@@ -236,6 +236,7 @@
             this.Name = "frmMemberDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Details";
+            this.Load += new System.EventHandler(this.frmMemberDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

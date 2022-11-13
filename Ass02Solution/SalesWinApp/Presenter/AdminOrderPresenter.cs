@@ -6,7 +6,33 @@ using System.Threading.Tasks;
 
 namespace SalesWinApp.Presenter
 {
-    internal class AdminOrderPresenter
+    public class AdminOrderPresenter
     {
+        public int OrderID { get; set; }
+        public string MemberName { get; set; }
+        private DateTime orderDate;
+        public DateTime OrderDate
+        {
+            get
+            {
+                return orderDate.Date;
+            }
+            set
+            {
+                orderDate = value;
+            }
+        }
+        private decimal orderTotal;
+        public decimal OrderTotal
+        {
+            get
+            {
+                return Math.Round(orderTotal, 2);
+            }
+            set
+            {
+                orderTotal = value;
+            }
+        }
     }
 }

@@ -195,6 +195,7 @@
             this.btnNew.TabIndex = 39;
             this.btnNew.Text = "&New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnLoad
             // 
@@ -204,6 +205,7 @@
             this.btnLoad.TabIndex = 38;
             this.btnLoad.Text = "&Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // txtCountry
             // 
@@ -348,6 +350,7 @@
             this.Name = "frmMembersManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Management";
+            this.Load += new System.EventHandler(this.frmMembersManagement_Load);
             this.grFilter.ResumeLayout(false);
             this.grFilter.PerformLayout();
             this.grSearch.ResumeLayout(false);
