@@ -1,5 +1,5 @@
 CREATE TABLE Member(
-	MemberId int not null PRIMARY KEY,
+	MemberId int not null PRIMARY KEY IDENTITY(1, 1),
 	Email varchar(100) not null,
 	CompanyName varchar(40) not null,
 	City varchar(15) not null,

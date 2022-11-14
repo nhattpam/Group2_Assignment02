@@ -42,14 +42,14 @@ namespace SalesWinApp.MemberUI
             txtMemberID.Enabled = false;
             if (InsertOrUpdate) // Insert
             {
-                btnAdd.Visible = true;
+                btnAdd1.Visible = true;
                 btnUpdate.Visible = false;
                 //txtMemberID.Text = MemberRepository.GetNextMemberId().ToString();
 
             }
             else
             {
-                btnAdd.Visible = false;
+                btnAdd1.Visible = false;
                 btnUpdate.Visible = true;
                 txtMemberID.Enabled = false;
 
@@ -86,6 +86,17 @@ namespace SalesWinApp.MemberUI
         }
 
         private void menuExit_Click(object sender, EventArgs e) => Close();
+
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("OK");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -127,44 +138,6 @@ namespace SalesWinApp.MemberUI
             {
                 MessageBox.Show(ex.Message, "Update member", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!Validation.IsEmail(txtEmail.Text))
-                {
-                    throw new Exception("Wrong Email!");
-                }
-                if (!txtPassword.Text.Equals(txtConfirm.Text))
-                {
-                    throw new Exception("Confirm does not match with Password!!!");
-                }
-
-                MemberPresenter memberPresenter = new MemberPresenter
-                {
-                    Fullname = txtMemberName.Text,
-                    Email = txtEmail.Text,
-                    Password = txtPassword.Text,
-                    CompanyName = txtCompanyName.Text,
-                    City = txtCity.Text,
-                    Country = txtCountry.Text
-                };
-
-                Member member = mapper.Map<Member>(memberPresenter);
-
-                MemberRepository.AddMember(member);
-                MessageBox.Show("Add successfully!!", "Add new member", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Add new member", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

@@ -237,5 +237,91 @@ namespace SalesWinApp.MemberUI
                 source.Position = source.Count - 1;
             }
         }
+
+        private MemberPresenter GetMemberInfo()
+        {
+            MemberPresenter memberPresenter = null;
+            try
+            {
+                memberPresenter = new MemberPresenter
+                {
+                    MemberId = int.Parse(txtMemberID.Text),
+                    Fullname = txtMemberName.Text,
+                    Email = txtEmail.Text,
+                    CompanyName = txtCompanyName.Text,
+                    Password = txtPassword.Text,
+                    City = txtCity.Text,
+                    Country = txtCountry.Text
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get Member Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return memberPresenter;
+        }
+
+        
+
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MemberPresenter memberPresenter = GetMemberInfo();
+                Member member = mapper.Map<Member>(memberPresenter);
+                if (member.MemberId == LoginMember.MemberId)
+                {
+                    MessageBox.Show("You can't delete yourself!!", "Delete member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (MessageBox.Show($"Do you really want to delete the member: \n" +
+                    $"Member ID: {member.MemberId}\n" +
+                    $"Member Name: {member.Fullname}\n" +
+                    $"Email: {member.Email}\n" +
+                    $"City: {member.City}\n" +
+                    $"Country: {member.Country}", "Delete member", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        IEnumerable<Order> orders = orderRepository.GetOrders(member.MemberId);
+                        foreach (var order in orders)
+                        {
+                            orderDetailRepository.DeleteOrderDetails(order.OrderId);
+                            orderRepository.DeleteOrder(order.OrderId);
+                        }
+                        memberRepository.DeleteMember(member.MemberId);
+                        search = false;
+                        LoadFullList();
+                        LoadMemberList();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Delete Member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvMemberList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MemberPresenter memberPresenter = GetMemberInfo();
+
+            frmMemberDetails frmMemberDetails = new frmMemberDetails
+            {
+                MemberRepository = this.memberRepository,
+                InsertOrUpdate = false,
+                MemberInfo = memberPresenter,
+                Text = "Update member info"
+            };
+
+            if (frmMemberDetails.ShowDialog() == DialogResult.OK)
+            {
+                LoadFullList();
+
+                LoadMemberList();
+                source.Position = source.Count - 1;
+            }
+        }
     }
 }

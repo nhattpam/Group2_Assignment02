@@ -83,3 +83,8 @@ D:\SWR\Group2_Assignment02\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.
 D:\SWR\Group2_Assignment02\Ass02Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\SWR\Group2_Assignment02\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\SWR\Group2_Assignment02\Ass02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\DataAccess\bin\Debug\net6.0\DataValidation.dll
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\DataAccess\bin\Debug\net6.0\DataValidation.pdb
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete

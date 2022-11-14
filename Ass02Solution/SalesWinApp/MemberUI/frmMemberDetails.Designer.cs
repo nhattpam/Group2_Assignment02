@@ -30,7 +30,7 @@
         {
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.lbCountry = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -68,16 +68,17 @@
             this.btnUpdate.TabIndex = 44;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAdd.Location = new System.Drawing.Point(39, 362);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 23);
-            this.btnAdd.TabIndex = 43;
-            this.btnAdd.Text = "&Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAdd1.Location = new System.Drawing.Point(39, 362);
+            this.btnAdd1.Name = "btnAdd";
+            this.btnAdd1.Size = new System.Drawing.Size(94, 23);
+            this.btnAdd1.TabIndex = 43;
+            this.btnAdd1.Text = "&Add";
+            this.btnAdd1.UseVisualStyleBackColor = true;
             // 
             // txtCountry
             // 
@@ -216,7 +217,7 @@
             this.ClientSize = new System.Drawing.Size(343, 413);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnAdd1);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.lbCountry);
             this.Controls.Add(this.txtCity);
@@ -246,7 +247,7 @@
 
         private Button btnCancel;
         private Button btnUpdate;
-        private Button btnAdd;
+        private Button btnAdd1;
         private TextBox txtCountry;
         private Label lbCountry;
         private TextBox txtCity;
