@@ -378,3 +378,7 @@ F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Deb
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductDetail.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductsManagement.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.CopyComplete
+C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrderDetails.resources
+C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrdersManagement.resources
+C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductDetail.resources
+C:\Users\Nguyen Mai Trung\OneDrive\Documents\GitHub\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductsManagement.resources

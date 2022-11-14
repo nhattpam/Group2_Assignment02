@@ -323,5 +323,166 @@ namespace SalesWinApp.MemberUI
                 source.Position = source.Count - 1;
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchValue = txtSearchValue.Text;
+                if (radioByID.Checked)
+                {
+                    int searchID = int.Parse(searchValue);
+                    Member member = memberRepository.GetMember(searchID);
+                    if (member != null)
+                    {
+                        IEnumerable<Member> searchResult = new List<Member>() { member };
+                        dataSource = searchResult;
+                        this.searchResult = searchResult;
+                        this.filterResult = searchResult;
+                        filter = false;
+                        search = true;
+                        LoadMemberList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else if (radioByName.Checked)
+                {
+                    string searchName = searchValue;
+                    IEnumerable<Member> searchResult = memberRepository.SearchMember(searchName);
+                    if (searchResult.Any())
+                    {
+                        dataSource = searchResult;
+                        this.searchResult = searchResult;
+                        this.filterResult = searchResult;
+                        filter = false;
+                        search = true;
+                        LoadMemberList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboSearchCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboSearchCity.DataSource != null)
+                {
+                    string city = cboSearchCity.SelectedItem.ToString();
+                    //string country = cboCountry.SelectedText.ToString();
+                    string country = cboCountry.Text;
+
+                    if (!string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(country))
+                    {
+                        IEnumerable<Member> searchResult;
+                        if (search)
+                        {
+                            searchResult = memberRepository.SearchMemberByCity(country, city, this.searchResult);
+                        }
+                        else
+                        {
+                            searchResult = memberRepository.SearchMemberByCity(country, city, this.dataSource);
+                        }
+
+                        if (searchResult.Any())
+                        {
+                            filter = true;
+                            filterResult = searchResult;
+                            LoadMemberList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboCountry.DataSource != null)
+                {
+                    string country = cboCountry.SelectedItem.ToString();
+                    if (!string.IsNullOrEmpty(country))
+                    {
+                        IEnumerable<Member> searchResult;
+                        if (search)
+                        {
+                            searchResult = memberRepository.SearchMemberByCountry(country, this.searchResult);
+                        }
+                        else
+                        {
+                            searchResult = memberRepository.SearchMemberByCountry(country, this.dataSource);
+                        }
+
+                        if (searchResult.Any())
+                        {
+                            cboSearchCity.DataBindings.Clear();
+
+                            IEnumerable<string> cityList = new List<string>();
+                            if (country.Equals("All"))
+                            {
+                                var keys = cityDictionary.Keys;
+                                IEnumerable<string> _cityList;
+                                foreach (var key in keys)
+                                {
+                                    cityDictionary.TryGetValue(key, out _cityList);
+                                    if (_cityList.Any())
+                                    {
+                                        foreach (var _city in _cityList)
+                                        {
+                                            cityList = cityList.Concat(new List<string>() { _city });
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                cityDictionary.TryGetValue(country, out cityList);
+                            }
+
+                            cityList = cityList.Distinct();
+
+                            citySource = new BindingSource();
+                            citySource.DataSource = cityList;
+                            cboSearchCity.DataSource = null;
+                            cboSearchCity.DataSource = citySource;
+
+                            filterResult = searchResult;
+                            filter = true;
+                            LoadMemberList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search member", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

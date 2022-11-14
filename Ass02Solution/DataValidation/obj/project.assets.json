@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\Nguyen Mai Trung\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+      "projectUniqueName": "C:\\Users\\Nguyen Mai Trung\\OneDrive\\Documents\\GitHub\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
       "projectName": "DataValidation",
-      "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\obj\\",
+      "projectPath": "C:\\Users\\Nguyen Mai Trung\\OneDrive\\Documents\\GitHub\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+      "packagesPath": "C:\\Users\\Nguyen Mai Trung\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nguyen Mai Trung\\OneDrive\\Documents\\GitHub\\Group2_Assignment02\\Ass02Solution\\DataValidation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nguyen Mai Trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
