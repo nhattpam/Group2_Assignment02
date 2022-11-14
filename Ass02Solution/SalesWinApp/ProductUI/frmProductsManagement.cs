@@ -4,6 +4,7 @@ using DataAccess.Repository.CartRepo;
 using DataAccess.Repository.MemberRepo;
 using DataAccess.Repository.OrderDetailRepo;
 using DataAccess.Repository.ProductRepo;
+using SalesWinApp.MemberUI;
 using SalesWinApp.Presenter;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,18 @@ namespace SalesWinApp.ProductUI
             mapper = config.CreateMapper();
         }
 
+        private void menuMemberMng_Click(object sender, EventArgs e)
+        {
+            frmMembersManagement frmMemberManagement = null;
+            frmMemberManagement = new frmMembersManagement
+            {
+                LoginMember = this.LoginMember,
+            };
+            frmMemberManagement.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmMemberManagement.Show();
+        }
+
         private void CreateMainMenu()
         {
             MenuStrip mainMenu = new MenuStrip();
@@ -77,7 +90,7 @@ namespace SalesWinApp.ProductUI
                 menuMemberMng.ShortcutKeys = (Keys)((Keys.Control) | Keys.M);
                 menuOrderMng.ShortcutKeys = (Keys)((Keys.Control) | Keys.O);
 
-                //menuMemberMng.Click += new EventHandler(menuMemberMng_Click);
+                menuMemberMng.Click += new EventHandler(menuMemberMng_Click);
                 //menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
                 menuExit.Click += new EventHandler(menuExit_Click);
             }
@@ -251,5 +264,103 @@ namespace SalesWinApp.ProductUI
         }
 
         private void menuExit_Click(object sender, EventArgs e) => Close();
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if (LoginMember.Fullname.Equals("Admin"))
+            {
+                frmProductDetail frmProductDetail = new frmProductDetail
+                {
+                    ProductRepository = this.productRepository,
+                    InsertOrUpdate = true,
+                    LoginMember = this.LoginMember,
+                    Text = "Add new Product"
+                };
+
+                if (frmProductDetail.ShowDialog() == DialogResult.OK)
+                {
+                    LoadFullList();
+                    LoadProductList();
+                }
+            }
+            else
+            {
+                //viewCart();
+            }
+        }
+
+        private ProductPresenter GetProductInfo()
+        {
+            ProductPresenter productPresenter = null;
+
+            try
+            {
+                productPresenter = new ProductPresenter()
+                {
+                    ProductId = int.Parse(txtProductID.Text),
+                    ProductName = txtProductName.Text,
+                    CategoryName = txtCategory.Text,
+                    Weight = txtWeight.Text,
+                    UnitPrice = decimal.Parse(txtUnitPrice.Text),
+                    UnitsInStock = int.Parse(txtUnitsInStock.Text)
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get Product Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return productPresenter;
+        }
+
+        private void dgvProductList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (LoginMember.Fullname.Equals("Admin"))
+                {
+                    ProductPresenter productPresenter = GetProductInfo();
+
+                    frmProductDetail frmProductDetail = new frmProductDetail
+                    {
+                        LoginMember = this.LoginMember,
+                        ProductRepository = this.productRepository,
+                        InsertOrUpdate = false,
+                        ProductInfo = productPresenter,
+                        Text = "Update Product Info"
+                    };
+
+                    if (frmProductDetail.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadFullList();
+                        LoadProductList();
+                    }
+                }
+                else
+                {
+                    ProductPresenter productPresenter = GetProductInfo();
+
+                    frmProductDetail frmProductDetail = new frmProductDetail
+                    {
+                        ProductRepository = this.productRepository,
+                        InsertOrUpdate = false,
+                        ProductInfo = productPresenter,
+                        LoginMember = this.LoginMember,
+                        CartRepository = this.CartRepository,
+                        Text = "Add To Cart"
+                    };
+
+                    if (frmProductDetail.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadFullList();
+                        LoadProductList();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get Product Detail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

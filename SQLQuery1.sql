@@ -9,7 +9,7 @@ CREATE TABLE Member(
 )
 
 CREATE TABLE [Order](
-	OrderId int not null PRIMARY KEY,
+	OrderId int not null PRIMARY KEY IDENTITY(1, 1),
 	MemberId int not null,
 	OrderDate datetime not null,
 	RequiredDate datetime,
@@ -19,13 +19,13 @@ CREATE TABLE [Order](
 )
 
 CREATE TABLE Category(
-	CategoryId int not null PRIMARY KEY,
+	CategoryId int not null PRIMARY KEY IDENTITY(1, 1),
 	CategoryName varchar(50) not null
 )
 
 
 CREATE TABLE Product(
-	ProductId int not null PRIMARY KEY,
+	ProductId int not null PRIMARY KEY IDENTITY(1, 1),
 	CategoryId int not null,
 	ProductName varchar(40) not null,
 	Weight varchar(20) not null,
