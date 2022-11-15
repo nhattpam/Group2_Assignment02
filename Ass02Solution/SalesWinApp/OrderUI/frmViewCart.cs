@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessObject;
 using DataAccess.Repository.ProductRepo;
+using DataAccess.Repository.OrderDetailRepo;
 
 namespace SalesWinApp.OrderUI
 {
@@ -159,6 +160,87 @@ namespace SalesWinApp.OrderUI
         {
             CreateMainMenu();
             LoadCart();
+        }
+
+        private void btnRemoveFromCart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show($"Do you really want to delete the cart item:\n" +
+                $"Product Name: {txtVCProductName.Text}\n" +
+                $"Price: {txtVCPrice.Text}\n" +
+                $"Quantity: {txtVCQuantity.Text}\n" +
+                $"Total: {txtVCTotal.Text}?", "Remove From Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    IProductRepository productRepository = new ProductRepository();
+                    CartRepository.RemoveFromCart(productRepository.GetProduct(txtVCProductName.Text).ProductId);
+                    LoadCart();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, CartProduct> cart = CartRepository.GetCart();
+
+            IProductRepository productRepository = new ProductRepository();
+            IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+            IEnumerable<OrderDetail> orderItems = new List<OrderDetail>();
+            Order order = new Order();
+            MemberPresenter member = this.LoginMember;
+
+            DateTime dateTime = DateTime.Today;
+
+            if (cart != null && cart.Count > 0)
+            {
+                try
+                {
+                    order = new Order
+                    {
+                        MemberId = member.MemberId,
+                        OrderDate = dateTime,
+                    };
+                    Order insertedOrder = orderRepository.AddOrder(order);
+
+                    foreach (var cartItem in cart)
+                    {
+                        decimal unitPrice = productRepository.GetProduct(cartItem.Key).UnitPrice;
+                        decimal price = decimal.Parse(txtVCPrice.Text);
+                        decimal discount = (unitPrice - price) / unitPrice;
+                        OrderDetail orderDetail = new OrderDetail()
+                        {
+                            OrderId = insertedOrder.OrderId,
+                            ProductId = cartItem.Key,
+                            UnitPrice = productRepository.GetProduct(cartItem.Key).UnitPrice,
+                            Quantity = cartItem.Value.Quantity,
+                            Discount = Convert.ToDouble(discount)
+                        };
+                        orderDetailRepository.AddOrderDetail(orderDetail);
+                        Product product = productRepository.GetProduct(cartItem.Key);
+                        product.UnitsInStock = product.UnitsInStock - cartItem.Value.Quantity;
+                        productRepository.Update(product);
+                    }
+                    MessageBox.Show("Check out successfully!", "Check out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CartRepository.DeleteCart();
+                    frmProductsManagement frmProductsManagement = new frmProductsManagement()
+                    {
+                        LoginMember = this.LoginMember,
+                        MemberRepository = this.MemberRepository,
+                        CartRepository = this.CartRepository
+                    };
+                    frmProductsManagement.Closed += (s, args) => this.Close();
+                    this.Hide();
+                    frmProductsManagement.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Check out", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

@@ -51,6 +51,7 @@
             this.btnCheckOut.TabIndex = 23;
             this.btnCheckOut.Text = "&Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // lbOrderTotal
             // 
@@ -70,6 +71,7 @@
             this.btnRemoveFromCart.TabIndex = 21;
             this.btnRemoveFromCart.Text = "&Remove From Cart";
             this.btnRemoveFromCart.UseVisualStyleBackColor = true;
+            this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click);
             // 
             // txtVCTotal
             // 
@@ -92,7 +94,7 @@
             this.lbTotal.AutoSize = true;
             this.lbTotal.Location = new System.Drawing.Point(302, 75);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(33, 15);
+            this.lbTotal.Size = new System.Drawing.Size(32, 15);
             this.lbTotal.TabIndex = 18;
             this.lbTotal.Text = "Total";
             // 

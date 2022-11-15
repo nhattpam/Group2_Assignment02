@@ -464,3 +464,6 @@ C:\Học\PRN211\Assignment02_GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\o
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCart.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources
+D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
+D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCart.resources
+D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources

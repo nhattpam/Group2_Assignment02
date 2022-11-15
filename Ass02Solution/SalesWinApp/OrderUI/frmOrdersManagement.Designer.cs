@@ -70,6 +70,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // endDate
             // 
@@ -175,6 +176,7 @@
             this.btnExport.TabIndex = 14;
             this.btnExport.Text = "Export Data";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // txtMemberName
             // 
@@ -210,7 +212,9 @@
             this.Controls.Add(this.txtMemberName);
             this.Controls.Add(this.lbMember);
             this.Name = "frmOrdersManagement";
-            this.Text = "frmOrdersManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Orders Management";
+            this.Load += new System.EventHandler(this.frmOrdersManagement_Load);
             this.grSearch.ResumeLayout(false);
             this.grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
