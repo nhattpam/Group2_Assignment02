@@ -112,6 +112,7 @@
             this.btnFilter.TabIndex = 18;
             this.btnFilter.Text = "&Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtTo
             // 
@@ -125,7 +126,7 @@
             this.lbTo.AutoSize = true;
             this.lbTo.Location = new System.Drawing.Point(193, 23);
             this.lbTo.Name = "lbTo";
-            this.lbTo.Size = new System.Drawing.Size(19, 15);
+            this.lbTo.Size = new System.Drawing.Size(20, 15);
             this.lbTo.TabIndex = 4;
             this.lbTo.Text = "To";
             // 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {}
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Prestige 14\\.nuget\\packages\\",
-        "outputPath": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Prestige 14\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
-                "projectPath": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj"
+              "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj"
               }
             }
           }
@@ -83,24 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
+    "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
         "projectName": "DataValidation",
-        "projectPath": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
-        "packagesPath": "C:\\Users\\Prestige 14\\.nuget\\packages\\",
-        "outputPath": "C:\\Học\\PRN211\\Assignment02_GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\DataValidation.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\PRN211\\GIT\\Group2_Assignment02\\Ass02Solution\\DataValidation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Prestige 14\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,7 +110,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -142,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

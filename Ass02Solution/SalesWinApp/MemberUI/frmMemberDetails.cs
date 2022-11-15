@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 using Validation = DataValidation.Validation;
 using BusinessObject;
+using SalesWinApp.ProductUI;
 
 namespace SalesWinApp.MemberUI
 {
@@ -79,7 +80,7 @@ namespace SalesWinApp.MemberUI
                         menuExit
                     });
 
-                    //menuOrder.Click += new EventHandler(menuOrder_Click);
+                    menuOrder.Click += new EventHandler(menuOrder_Click);
                     menuExit.Click += new EventHandler(menuExit_Click);
                 }
             }
@@ -87,6 +88,18 @@ namespace SalesWinApp.MemberUI
 
         private void menuExit_Click(object sender, EventArgs e) => Close();
 
+        private void menuOrder_Click(object sender, EventArgs e)
+        {
+            frmProductsManagement frmProductsManagement = new frmProductsManagement()
+            {
+                LoginMember = MemberInfo,
+                MemberRepository = this.MemberRepository,
+                CartRepository = this.CartRepository
+            };
+            frmProductsManagement.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmProductsManagement.Show();
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

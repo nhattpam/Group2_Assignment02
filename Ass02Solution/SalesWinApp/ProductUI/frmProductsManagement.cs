@@ -5,6 +5,7 @@ using DataAccess.Repository.MemberRepo;
 using DataAccess.Repository.OrderDetailRepo;
 using DataAccess.Repository.ProductRepo;
 using SalesWinApp.MemberUI;
+using SalesWinApp.OrderUI;
 using SalesWinApp.Presenter;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,21 @@ namespace SalesWinApp.ProductUI
             mapper = config.CreateMapper();
         }
 
+        private void menuProfile_Click(object sender, EventArgs e)
+        {
+            frmMemberDetails frmMemberDetails = new frmMemberDetails
+            {
+                Text = "Member Details",
+                MemberInfo = LoginMember,
+                InsertOrUpdate = false,
+                MemberRepository = this.MemberRepository,
+                CartRepository = this.CartRepository
+            };
+            frmMemberDetails.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmMemberDetails.Show();
+        }
+
         private void menuMemberMng_Click(object sender, EventArgs e)
         {
             frmMembersManagement frmMemberManagement = null;
@@ -58,6 +74,19 @@ namespace SalesWinApp.ProductUI
             frmMemberManagement.Closed += (s, args) => this.Close();
             this.Hide();
             frmMemberManagement.Show();
+        }
+
+        private void menuOrderMng_Click(object sender, EventArgs e)
+        {
+            frmOrdersManagement frmOrdersManagement = new frmOrdersManagement
+            {
+                LoginMember = this.LoginMember,
+                CartRepository = this.CartRepository,
+                MemberRepository = this.MemberRepository
+            };
+            frmOrdersManagement.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmOrdersManagement.Show();
         }
 
         private void CreateMainMenu()
@@ -91,7 +120,7 @@ namespace SalesWinApp.ProductUI
                 menuOrderMng.ShortcutKeys = (Keys)((Keys.Control) | Keys.O);
 
                 menuMemberMng.Click += new EventHandler(menuMemberMng_Click);
-                //menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
+                menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
                 menuExit.Click += new EventHandler(menuExit_Click);
             }
             else
@@ -108,7 +137,7 @@ namespace SalesWinApp.ProductUI
                     menuExit
                 });
                 //menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
-                //menuProfile.Click += new EventHandler(menuProfile_Click);
+                menuProfile.Click += new EventHandler(menuProfile_Click);
                 menuExit.Click += new EventHandler(menuExit_Click);
             }
 
@@ -265,6 +294,24 @@ namespace SalesWinApp.ProductUI
 
         private void menuExit_Click(object sender, EventArgs e) => Close();
 
+
+        private void viewCart()
+        {
+            frmViewCart frmViewCart = new frmViewCart
+            {
+                LoginMember = this.LoginMember,
+                MemberRepository = this.MemberRepository,
+                CartRepository = this.CartRepository
+            };
+            frmViewCart.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmViewCart.Show();
+        }
+        private void menuViewCart_Click(object sender, EventArgs e)
+        {
+            viewCart();
+        }
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             if (LoginMember.Fullname.Equals("Admin"))
@@ -285,7 +332,7 @@ namespace SalesWinApp.ProductUI
             }
             else
             {
-                //viewCart();
+                viewCart();
             }
         }
 
@@ -360,6 +407,82 @@ namespace SalesWinApp.ProductUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Get Product Detail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string start = txtFrom.Text;
+                string end = txtTo.Text;
+                if (string.IsNullOrEmpty(start) && string.IsNullOrEmpty(end))
+                {
+                    LoadFullList();
+                    LoadProductList();
+                }
+                else
+                {
+                    if (rdUnitPrice.Checked)
+                    {
+                        decimal from = decimal.Parse(start);
+                        decimal to = decimal.Parse(end);
+                        if (from > to)
+                        {
+                            decimal temp = from;
+                            from = to;
+                            to = temp;
+                        }
+                        IEnumerable<Product> searchResult;
+                        if (search)
+                        {
+                            searchResult = productRepository.SearchProduct(from, to, this.searchResult);
+                        }
+                        else
+                        {
+                            searchResult = productRepository.SearchProduct(from, to);
+                        }
+                        if (searchResult.Any())
+                        {
+                            filterResult = searchResult;
+                            filter = true;
+                            LoadProductList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (rdUnitsInStock.Checked)
+                    {
+                        int from = int.Parse(start);
+                        int to = int.Parse(end);
+                        IEnumerable<Product> searchResult;
+                        if (search)
+                        {
+                            searchResult = productRepository.SearchProduct(from, to, this.searchResult);
+                        }
+                        else
+                        {
+                            searchResult = productRepository.SearchProduct(from, to);
+                        }
+                        if (searchResult.Any())
+                        {
+                            filterResult = searchResult;
+                            filter = true;
+                            LoadProductList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -461,3 +461,6 @@ C:\Học\PRN211\Assignment02_GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\o
 C:\Học\PRN211\Assignment02_GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
 C:\Học\PRN211\Assignment02_GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
 C:\Học\PRN211\Assignment02_GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCart.resources
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources
