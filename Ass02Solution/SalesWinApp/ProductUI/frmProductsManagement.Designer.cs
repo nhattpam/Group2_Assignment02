@@ -31,14 +31,6 @@
             this.txtUnitsInStock = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
-            this.grFilter = new System.Windows.Forms.GroupBox();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.lbTo = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.lbFrom = new System.Windows.Forms.Label();
-            this.rdUnitsInStock = new System.Windows.Forms.RadioButton();
-            this.rdUnitPrice = new System.Windows.Forms.RadioButton();
             this.grSearch = new System.Windows.Forms.GroupBox();
             this.radioByName = new System.Windows.Forms.RadioButton();
             this.radioByID = new System.Windows.Forms.RadioButton();
@@ -58,7 +50,6 @@
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.lbProductID = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.grFilter.SuspendLayout();
             this.grSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +57,7 @@
             // txtUnitsInStock
             // 
             this.txtUnitsInStock.Enabled = false;
-            this.txtUnitsInStock.Location = new System.Drawing.Point(466, 107);
+            this.txtUnitsInStock.Location = new System.Drawing.Point(123, 235);
             this.txtUnitsInStock.Name = "txtUnitsInStock";
             this.txtUnitsInStock.Size = new System.Drawing.Size(185, 23);
             this.txtUnitsInStock.TabIndex = 49;
@@ -74,7 +65,7 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Enabled = false;
-            this.txtUnitPrice.Location = new System.Drawing.Point(466, 66);
+            this.txtUnitPrice.Location = new System.Drawing.Point(123, 194);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(185, 23);
             this.txtUnitPrice.TabIndex = 48;
@@ -87,87 +78,6 @@
             this.txtCategory.Size = new System.Drawing.Size(185, 23);
             this.txtCategory.TabIndex = 46;
             // 
-            // grFilter
-            // 
-            this.grFilter.Controls.Add(this.btnFilter);
-            this.grFilter.Controls.Add(this.txtTo);
-            this.grFilter.Controls.Add(this.lbTo);
-            this.grFilter.Controls.Add(this.txtFrom);
-            this.grFilter.Controls.Add(this.lbFrom);
-            this.grFilter.Controls.Add(this.rdUnitsInStock);
-            this.grFilter.Controls.Add(this.rdUnitPrice);
-            this.grFilter.Enabled = false;
-            this.grFilter.Location = new System.Drawing.Point(314, 203);
-            this.grFilter.Name = "grFilter";
-            this.grFilter.Size = new System.Drawing.Size(336, 89);
-            this.grFilter.TabIndex = 60;
-            this.grFilter.TabStop = false;
-            this.grFilter.Text = "Filter";
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.Location = new System.Drawing.Point(238, 53);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(80, 23);
-            this.btnFilter.TabIndex = 18;
-            this.btnFilter.Text = "&Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // txtTo
-            // 
-            this.txtTo.Location = new System.Drawing.Point(218, 19);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(101, 23);
-            this.txtTo.TabIndex = 15;
-            // 
-            // lbTo
-            // 
-            this.lbTo.AutoSize = true;
-            this.lbTo.Location = new System.Drawing.Point(193, 23);
-            this.lbTo.Name = "lbTo";
-            this.lbTo.Size = new System.Drawing.Size(20, 15);
-            this.lbTo.TabIndex = 4;
-            this.lbTo.Text = "To";
-            // 
-            // txtFrom
-            // 
-            this.txtFrom.Location = new System.Drawing.Point(55, 19);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(101, 23);
-            this.txtFrom.TabIndex = 14;
-            // 
-            // lbFrom
-            // 
-            this.lbFrom.AutoSize = true;
-            this.lbFrom.Location = new System.Drawing.Point(14, 22);
-            this.lbFrom.Name = "lbFrom";
-            this.lbFrom.Size = new System.Drawing.Size(35, 15);
-            this.lbFrom.TabIndex = 2;
-            this.lbFrom.Text = "From";
-            // 
-            // rdUnitsInStock
-            // 
-            this.rdUnitsInStock.AutoSize = true;
-            this.rdUnitsInStock.Location = new System.Drawing.Point(115, 55);
-            this.rdUnitsInStock.Name = "rdUnitsInStock";
-            this.rdUnitsInStock.Size = new System.Drawing.Size(97, 19);
-            this.rdUnitsInStock.TabIndex = 17;
-            this.rdUnitsInStock.Text = "Units In Stock";
-            this.rdUnitsInStock.UseVisualStyleBackColor = true;
-            // 
-            // rdUnitPrice
-            // 
-            this.rdUnitPrice.AutoSize = true;
-            this.rdUnitPrice.Checked = true;
-            this.rdUnitPrice.Location = new System.Drawing.Point(14, 55);
-            this.rdUnitPrice.Name = "rdUnitPrice";
-            this.rdUnitPrice.Size = new System.Drawing.Size(76, 19);
-            this.rdUnitPrice.TabIndex = 16;
-            this.rdUnitPrice.TabStop = true;
-            this.rdUnitPrice.Text = "Unit Price";
-            this.rdUnitPrice.UseVisualStyleBackColor = true;
-            // 
             // grSearch
             // 
             this.grSearch.Controls.Add(this.radioByName);
@@ -176,9 +86,9 @@
             this.grSearch.Controls.Add(this.btnSearch);
             this.grSearch.Controls.Add(this.lbSearch);
             this.grSearch.Enabled = false;
-            this.grSearch.Location = new System.Drawing.Point(20, 203);
+            this.grSearch.Location = new System.Drawing.Point(330, 349);
             this.grSearch.Name = "grSearch";
-            this.grSearch.Size = new System.Drawing.Size(288, 89);
+            this.grSearch.Size = new System.Drawing.Size(673, 89);
             this.grSearch.TabIndex = 59;
             this.grSearch.TabStop = false;
             this.grSearch.Text = "Search";
@@ -187,7 +97,7 @@
             // 
             this.radioByName.AutoSize = true;
             this.radioByName.Checked = true;
-            this.radioByName.Location = new System.Drawing.Point(216, 53);
+            this.radioByName.Location = new System.Drawing.Point(496, 53);
             this.radioByName.Name = "radioByName";
             this.radioByName.Size = new System.Drawing.Size(73, 19);
             this.radioByName.TabIndex = 12;
@@ -198,7 +108,7 @@
             // radioByID
             // 
             this.radioByID.AutoSize = true;
-            this.radioByID.Location = new System.Drawing.Point(216, 23);
+            this.radioByID.Location = new System.Drawing.Point(496, 23);
             this.radioByID.Name = "radioByID";
             this.radioByID.Size = new System.Drawing.Size(52, 19);
             this.radioByID.TabIndex = 11;
@@ -210,14 +120,14 @@
             // 
             this.txtSearchValue.Location = new System.Drawing.Point(77, 19);
             this.txtSearchValue.Name = "txtSearchValue";
-            this.txtSearchValue.Size = new System.Drawing.Size(117, 23);
+            this.txtSearchValue.Size = new System.Drawing.Size(381, 23);
             this.txtSearchValue.TabIndex = 10;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(77, 53);
+            this.btnSearch.Location = new System.Drawing.Point(158, 51);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(76, 23);
+            this.btnSearch.Size = new System.Drawing.Size(226, 23);
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -233,18 +143,19 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(454, 162);
+            this.btnDelete.Location = new System.Drawing.Point(826, 287);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 23);
+            this.btnDelete.Size = new System.Drawing.Size(177, 23);
             this.btnDelete.TabIndex = 52;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(266, 162);
+            this.btnNew.Location = new System.Drawing.Point(586, 287);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(109, 23);
+            this.btnNew.Size = new System.Drawing.Size(192, 23);
             this.btnNew.TabIndex = 51;
             this.btnNew.Text = "&New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -252,9 +163,9 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(69, 162);
+            this.btnLoad.Location = new System.Drawing.Point(330, 287);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(109, 23);
+            this.btnLoad.Size = new System.Drawing.Size(194, 23);
             this.btnLoad.TabIndex = 50;
             this.btnLoad.Text = "&Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -263,7 +174,7 @@
             // lbUnitsInStock
             // 
             this.lbUnitsInStock.AutoSize = true;
-            this.lbUnitsInStock.Location = new System.Drawing.Point(372, 110);
+            this.lbUnitsInStock.Location = new System.Drawing.Point(29, 238);
             this.lbUnitsInStock.Name = "lbUnitsInStock";
             this.lbUnitsInStock.Size = new System.Drawing.Size(79, 15);
             this.lbUnitsInStock.TabIndex = 58;
@@ -272,7 +183,7 @@
             // lbUnitPrice
             // 
             this.lbUnitPrice.AutoSize = true;
-            this.lbUnitPrice.Location = new System.Drawing.Point(372, 69);
+            this.lbUnitPrice.Location = new System.Drawing.Point(29, 197);
             this.lbUnitPrice.Name = "lbUnitPrice";
             this.lbUnitPrice.Size = new System.Drawing.Size(58, 15);
             this.lbUnitPrice.TabIndex = 57;
@@ -281,7 +192,7 @@
             // lbWeight
             // 
             this.lbWeight.AutoSize = true;
-            this.lbWeight.Location = new System.Drawing.Point(372, 28);
+            this.lbWeight.Location = new System.Drawing.Point(29, 156);
             this.lbWeight.Name = "lbWeight";
             this.lbWeight.Size = new System.Drawing.Size(45, 15);
             this.lbWeight.TabIndex = 56;
@@ -290,7 +201,7 @@
             // txtWeight
             // 
             this.txtWeight.Enabled = false;
-            this.txtWeight.Location = new System.Drawing.Point(466, 25);
+            this.txtWeight.Location = new System.Drawing.Point(123, 153);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(185, 23);
             this.txtWeight.TabIndex = 47;
@@ -341,13 +252,13 @@
             // dgvProductList
             // 
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList.Location = new System.Drawing.Point(18, 302);
+            this.dgvProductList.Location = new System.Drawing.Point(330, 12);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
             this.dgvProductList.RowHeadersWidth = 51;
             this.dgvProductList.RowTemplate.Height = 25;
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductList.Size = new System.Drawing.Size(631, 257);
+            this.dgvProductList.Size = new System.Drawing.Size(673, 257);
             this.dgvProductList.TabIndex = 61;
             this.dgvProductList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellDoubleClick);
             // 
@@ -355,12 +266,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 421);
+            this.ClientSize = new System.Drawing.Size(1025, 502);
             this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.txtUnitsInStock);
             this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtCategory);
-            this.Controls.Add(this.grFilter);
             this.Controls.Add(this.grSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
@@ -379,8 +289,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products Management";
             this.Load += new System.EventHandler(this.frmProductsManagement_Load);
-            this.grFilter.ResumeLayout(false);
-            this.grFilter.PerformLayout();
             this.grSearch.ResumeLayout(false);
             this.grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
@@ -394,14 +302,6 @@
         private TextBox txtUnitsInStock;
         private TextBox txtUnitPrice;
         private TextBox txtCategory;
-        private GroupBox grFilter;
-        private Button btnFilter;
-        private TextBox txtTo;
-        private Label lbTo;
-        private TextBox txtFrom;
-        private Label lbFrom;
-        private RadioButton rdUnitsInStock;
-        private RadioButton rdUnitPrice;
         private GroupBox grSearch;
         private RadioButton radioByName;
         private RadioButton radioByID;

@@ -35,9 +35,10 @@
             // 
             // btnOrderManagement
             // 
-            this.btnOrderManagement.Location = new System.Drawing.Point(363, 33);
+            this.btnOrderManagement.Location = new System.Drawing.Point(415, 44);
+            this.btnOrderManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOrderManagement.Name = "btnOrderManagement";
-            this.btnOrderManagement.Size = new System.Drawing.Size(126, 53);
+            this.btnOrderManagement.Size = new System.Drawing.Size(144, 71);
             this.btnOrderManagement.TabIndex = 6;
             this.btnOrderManagement.Text = "&Order Management";
             this.btnOrderManagement.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // btnProductManagement
             // 
-            this.btnProductManagement.Location = new System.Drawing.Point(206, 33);
+            this.btnProductManagement.Location = new System.Drawing.Point(235, 44);
+            this.btnProductManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProductManagement.Name = "btnProductManagement";
-            this.btnProductManagement.Size = new System.Drawing.Size(126, 53);
+            this.btnProductManagement.Size = new System.Drawing.Size(144, 71);
             this.btnProductManagement.TabIndex = 5;
             this.btnProductManagement.Text = "&Product Management";
             this.btnProductManagement.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // btnMemberManagement
             // 
-            this.btnMemberManagement.Location = new System.Drawing.Point(44, 33);
+            this.btnMemberManagement.Location = new System.Drawing.Point(50, 44);
+            this.btnMemberManagement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMemberManagement.Name = "btnMemberManagement";
-            this.btnMemberManagement.Size = new System.Drawing.Size(126, 53);
+            this.btnMemberManagement.Size = new System.Drawing.Size(144, 71);
             this.btnMemberManagement.TabIndex = 4;
             this.btnMemberManagement.Text = "&Member Management";
             this.btnMemberManagement.UseVisualStyleBackColor = true;
@@ -65,15 +68,16 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 118);
+            this.ClientSize = new System.Drawing.Size(608, 157);
             this.Controls.Add(this.btnOrderManagement);
             this.Controls.Add(this.btnProductManagement);
             this.Controls.Add(this.btnMemberManagement);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "ADMIN MAIN";
             this.ResumeLayout(false);
 
         }

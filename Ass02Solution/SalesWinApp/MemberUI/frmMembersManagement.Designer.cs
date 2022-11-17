@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.lbCompanyName = new System.Windows.Forms.Label();
-            this.grFilter = new System.Windows.Forms.GroupBox();
-            this.cboSearchCity = new System.Windows.Forms.ComboBox();
-            this.lbSearchCity = new System.Windows.Forms.Label();
-            this.cboCountry = new System.Windows.Forms.ComboBox();
-            this.lbSearchCountry = new System.Windows.Forms.Label();
             this.grSearch = new System.Windows.Forms.GroupBox();
             this.radioByName = new System.Windows.Forms.RadioButton();
             this.radioByID = new System.Windows.Forms.RadioButton();
@@ -57,7 +52,6 @@
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.lbMemberID = new System.Windows.Forms.Label();
             this.dgvMemberList = new System.Windows.Forms.DataGridView();
-            this.grFilter.SuspendLayout();
             this.grSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
@@ -71,57 +65,6 @@
             this.lbCompanyName.TabIndex = 43;
             this.lbCompanyName.Text = "Company Name";
             // 
-            // grFilter
-            // 
-            this.grFilter.Controls.Add(this.cboSearchCity);
-            this.grFilter.Controls.Add(this.lbSearchCity);
-            this.grFilter.Controls.Add(this.cboCountry);
-            this.grFilter.Controls.Add(this.lbSearchCountry);
-            this.grFilter.Location = new System.Drawing.Point(421, 300);
-            this.grFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grFilter.Name = "grFilter";
-            this.grFilter.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grFilter.Size = new System.Drawing.Size(297, 112);
-            this.grFilter.TabIndex = 42;
-            this.grFilter.TabStop = false;
-            this.grFilter.Text = "Filter";
-            // 
-            // cboSearchCity
-            // 
-            this.cboSearchCity.Location = new System.Drawing.Point(88, 71);
-            this.cboSearchCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboSearchCity.Name = "cboSearchCity";
-            this.cboSearchCity.Size = new System.Drawing.Size(188, 28);
-            this.cboSearchCity.TabIndex = 20;
-            this.cboSearchCity.SelectedIndexChanged += new System.EventHandler(this.cboSearchCity_SelectedIndexChanged);
-            // 
-            // lbSearchCity
-            // 
-            this.lbSearchCity.AutoSize = true;
-            this.lbSearchCity.Location = new System.Drawing.Point(37, 75);
-            this.lbSearchCity.Name = "lbSearchCity";
-            this.lbSearchCity.Size = new System.Drawing.Size(34, 20);
-            this.lbSearchCity.TabIndex = 19;
-            this.lbSearchCity.Text = "City";
-            // 
-            // cboCountry
-            // 
-            this.cboCountry.Location = new System.Drawing.Point(88, 24);
-            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(188, 28);
-            this.cboCountry.TabIndex = 0;
-            this.cboCountry.SelectedIndexChanged += new System.EventHandler(this.cboCountry_SelectedIndexChanged);
-            // 
-            // lbSearchCountry
-            // 
-            this.lbSearchCountry.AutoSize = true;
-            this.lbSearchCountry.Location = new System.Drawing.Point(31, 28);
-            this.lbSearchCountry.Name = "lbSearchCountry";
-            this.lbSearchCountry.Size = new System.Drawing.Size(60, 20);
-            this.lbSearchCountry.TabIndex = 18;
-            this.lbSearchCountry.Text = "Country";
-            // 
             // grSearch
             // 
             this.grSearch.Controls.Add(this.radioByName);
@@ -129,11 +72,11 @@
             this.grSearch.Controls.Add(this.txtSearchValue);
             this.grSearch.Controls.Add(this.btnSearch);
             this.grSearch.Controls.Add(this.lbSearch);
-            this.grSearch.Location = new System.Drawing.Point(27, 295);
+            this.grSearch.Location = new System.Drawing.Point(446, 448);
             this.grSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grSearch.Name = "grSearch";
             this.grSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grSearch.Size = new System.Drawing.Size(330, 119);
+            this.grSearch.Size = new System.Drawing.Size(670, 119);
             this.grSearch.TabIndex = 41;
             this.grSearch.TabStop = false;
             this.grSearch.Text = "Search";
@@ -142,7 +85,7 @@
             // 
             this.radioByName.AutoSize = true;
             this.radioByName.Checked = true;
-            this.radioByName.Location = new System.Drawing.Point(231, 73);
+            this.radioByName.Location = new System.Drawing.Point(497, 72);
             this.radioByName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioByName.Name = "radioByName";
             this.radioByName.Size = new System.Drawing.Size(90, 24);
@@ -154,7 +97,7 @@
             // radioByID
             // 
             this.radioByID.AutoSize = true;
-            this.radioByID.Location = new System.Drawing.Point(231, 33);
+            this.radioByID.Location = new System.Drawing.Point(497, 32);
             this.radioByID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioByID.Name = "radioByID";
             this.radioByID.Size = new System.Drawing.Size(65, 24);
@@ -168,15 +111,15 @@
             this.txtSearchValue.Location = new System.Drawing.Point(73, 28);
             this.txtSearchValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchValue.Name = "txtSearchValue";
-            this.txtSearchValue.Size = new System.Drawing.Size(134, 27);
+            this.txtSearchValue.Size = new System.Drawing.Size(371, 27);
             this.txtSearchValue.TabIndex = 17;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(73, 73);
+            this.btnSearch.Location = new System.Drawing.Point(148, 72);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(86, 31);
+            this.btnSearch.Size = new System.Drawing.Size(203, 31);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -193,7 +136,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(522, 256);
+            this.btnDelete.Location = new System.Drawing.Point(229, 413);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(125, 31);
@@ -204,7 +147,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(309, 256);
+            this.btnNew.Location = new System.Drawing.Point(98, 414);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(125, 31);
@@ -215,7 +158,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(83, 256);
+            this.btnLoad.Location = new System.Drawing.Point(156, 462);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(125, 31);
@@ -226,7 +169,7 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(509, 155);
+            this.txtCountry.Location = new System.Drawing.Point(144, 369);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(210, 27);
@@ -235,7 +178,7 @@
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(433, 159);
+            this.lbCountry.Location = new System.Drawing.Point(68, 373);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(60, 20);
             this.lbCountry.TabIndex = 36;
@@ -243,7 +186,7 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(509, 100);
+            this.txtCity.Location = new System.Drawing.Point(144, 314);
             this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(210, 27);
@@ -252,7 +195,7 @@
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Location = new System.Drawing.Point(433, 104);
+            this.lbCity.Location = new System.Drawing.Point(68, 318);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(34, 20);
             this.lbCity.TabIndex = 34;
@@ -260,7 +203,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(509, 45);
+            this.txtPassword.Location = new System.Drawing.Point(144, 259);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -270,7 +213,7 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(433, 49);
+            this.lbPassword.Location = new System.Drawing.Point(68, 263);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(70, 20);
             this.lbPassword.TabIndex = 32;
@@ -338,14 +281,14 @@
             // dgvMemberList
             // 
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(8, 428);
+            this.dgvMemberList.Location = new System.Drawing.Point(399, 13);
             this.dgvMemberList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 25;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(743, 344);
+            this.dgvMemberList.Size = new System.Drawing.Size(743, 397);
             this.dgvMemberList.TabIndex = 44;
             this.dgvMemberList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellDoubleClick);
             // 
@@ -353,10 +296,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 809);
+            this.ClientSize = new System.Drawing.Size(1184, 594);
             this.Controls.Add(this.dgvMemberList);
             this.Controls.Add(this.lbCompanyName);
-            this.Controls.Add(this.grFilter);
             this.Controls.Add(this.grSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
@@ -379,8 +321,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Management";
             this.Load += new System.EventHandler(this.frmMembersManagement_Load);
-            this.grFilter.ResumeLayout(false);
-            this.grFilter.PerformLayout();
             this.grSearch.ResumeLayout(false);
             this.grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
@@ -392,11 +332,6 @@
         #endregion
 
         private Label lbCompanyName;
-        private GroupBox grFilter;
-        private ComboBox cboSearchCity;
-        private Label lbSearchCity;
-        private ComboBox cboCountry;
-        private Label lbSearchCountry;
         private GroupBox grSearch;
         private RadioButton radioByName;
         private RadioButton radioByID;

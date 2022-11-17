@@ -29,10 +29,8 @@ namespace SalesWinApp.MemberUI
         BindingSource countrySource;
 
         bool search = false;
-        bool filter = false;
         IEnumerable<Member> dataSource;
         IEnumerable<Member> searchResult;
-        IEnumerable<Member> filterResult;
 
         IEnumerable<string> countryList;
         Dictionary<string, IEnumerable<string>> cityDictionary;
@@ -110,7 +108,6 @@ namespace SalesWinApp.MemberUI
             dgvMemberList.Enabled = false;
             btnLoad.Enabled = true;
             grSearch.Enabled = false;
-            grFilter.Enabled = false;
             CreateMainMenu();
         }
 
@@ -122,7 +119,6 @@ namespace SalesWinApp.MemberUI
             dgvMemberList.Enabled = true;
             btnLoad.Enabled = true;
             grSearch.Enabled = true;
-            grFilter.Enabled = true;
             LoadFullList();
             LoadMemberList();
         }
@@ -130,14 +126,12 @@ namespace SalesWinApp.MemberUI
         private void LoadFullList()
         {
             search = false;
-            filter = false;
             var members = memberRepository.GetMembersList();
             var memberList = from member in members
                              orderby member.Fullname descending
                              select member;
             dataSource = memberList;
             searchResult = memberList;
-            filterResult = memberList;
         }
 
         private void LoadMemberList()
@@ -146,25 +140,15 @@ namespace SalesWinApp.MemberUI
             {
                 IEnumerable<MemberPresenter> presentSource;
 
-                if (filter)
-                {
-                    presentSource = filterResult.Select
-                        (
-                            mem => mapper.Map<Member, MemberPresenter>(mem)
-                        );
-                }
-                else
-                {
+                
                     presentSource = dataSource.Select
                         (
                             mem => mapper.Map<Member, MemberPresenter>(mem)
                         );
-                }
 
                 source = new BindingSource();
                 source.DataSource = presentSource;
-                if (!filter)
-                {
+               
                     countryList = from member in dataSource
                                   where !string.IsNullOrEmpty(member.Country.Trim())
                                   orderby member.Country ascending
@@ -189,16 +173,8 @@ namespace SalesWinApp.MemberUI
                     {
                         countrySource = new BindingSource();
                         countrySource.DataSource = countryList;
-                        cboCountry.DataSource = null;
-                        cboCountry.DataSource = countrySource;
 
-                        cboSearchCity.DataBindings.Clear();
-                        //citySource = new BindingSource();
-                        //citySource.DataSource = cityList;
-                        //cboSearchCity.DataSource = null;
-                        //cboSearchCity.DataSource = citySource;
                     }
-                }
 
                 txtMemberID.DataBindings.Clear();
                 txtMemberName.DataBindings.Clear();
@@ -352,8 +328,6 @@ namespace SalesWinApp.MemberUI
                         IEnumerable<Member> searchResult = new List<Member>() { member };
                         dataSource = searchResult;
                         this.searchResult = searchResult;
-                        this.filterResult = searchResult;
-                        filter = false;
                         search = true;
                         LoadMemberList();
                     }
@@ -371,8 +345,6 @@ namespace SalesWinApp.MemberUI
                     {
                         dataSource = searchResult;
                         this.searchResult = searchResult;
-                        this.filterResult = searchResult;
-                        filter = false;
                         search = true;
                         LoadMemberList();
                     }
@@ -388,115 +360,7 @@ namespace SalesWinApp.MemberUI
             }
         }
 
-        private void cboSearchCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cboSearchCity.DataSource != null)
-                {
-                    string city = cboSearchCity.SelectedItem.ToString();
-                    //string country = cboCountry.SelectedText.ToString();
-                    string country = cboCountry.Text;
 
-                    if (!string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(country))
-                    {
-                        IEnumerable<Member> searchResult;
-                        if (search)
-                        {
-                            searchResult = memberRepository.SearchMemberByCity(country, city, this.searchResult);
-                        }
-                        else
-                        {
-                            searchResult = memberRepository.SearchMemberByCity(country, city, this.dataSource);
-                        }
-
-                        if (searchResult.Any())
-                        {
-                            filter = true;
-                            filterResult = searchResult;
-                            LoadMemberList();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Search member", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void cboCountry_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cboCountry.DataSource != null)
-                {
-                    string country = cboCountry.SelectedItem.ToString();
-                    if (!string.IsNullOrEmpty(country))
-                    {
-                        IEnumerable<Member> searchResult;
-                        if (search)
-                        {
-                            searchResult = memberRepository.SearchMemberByCountry(country, this.searchResult);
-                        }
-                        else
-                        {
-                            searchResult = memberRepository.SearchMemberByCountry(country, this.dataSource);
-                        }
-
-                        if (searchResult.Any())
-                        {
-                            cboSearchCity.DataBindings.Clear();
-
-                            IEnumerable<string> cityList = new List<string>();
-                            if (country.Equals("All"))
-                            {
-                                var keys = cityDictionary.Keys;
-                                IEnumerable<string> _cityList;
-                                foreach (var key in keys)
-                                {
-                                    cityDictionary.TryGetValue(key, out _cityList);
-                                    if (_cityList.Any())
-                                    {
-                                        foreach (var _city in _cityList)
-                                        {
-                                            cityList = cityList.Concat(new List<string>() { _city });
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                cityDictionary.TryGetValue(country, out cityList);
-                            }
-
-                            cityList = cityList.Distinct();
-
-                            citySource = new BindingSource();
-                            citySource.DataSource = cityList;
-                            cboSearchCity.DataSource = null;
-                            cboSearchCity.DataSource = citySource;
-
-                            filterResult = searchResult;
-                            filter = true;
-                            LoadMemberList();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No result found!", "Search member", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Search member", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
     }
 }

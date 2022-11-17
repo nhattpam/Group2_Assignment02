@@ -29,11 +29,9 @@ namespace SalesWinApp.ProductUI
 
         BindingSource source;
         bool search = false;
-        bool filter = false;
 
         IEnumerable<Product> dataSource;
         IEnumerable<Product> searchResult;
-        IEnumerable<Product> filterResult;
 
         private IMapper mapper;
         private IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
@@ -149,61 +147,16 @@ namespace SalesWinApp.ProductUI
             {
                 IEnumerable<ProductPresenter> presentSource;
 
-                if (filter)
-                {
-                    presentSource = filterResult.Select
-                        (
-                            pro => mapper.Map<Product, ProductPresenter>(pro)
-                        );
-                }
-                else
-                {
+                
                     presentSource = dataSource.Select
                         (
                             pro => mapper.Map<Product, ProductPresenter>(pro)
                         );
-                }
 
                 source = new BindingSource();
                 source.DataSource = presentSource;
 
-                if (!filter)
-                {
-                    //countryList = from member in dataSource
-                    //              where !string.IsNullOrEmpty(member.Country.Trim())
-                    //              orderby member.Country ascending
-                    //              select member.Country;
-                    //countryList = countryList.Distinct();
-                    //cityDictionary = new Dictionary<string, IEnumerable<string>>();
-                    //foreach (var country in countryList)
-                    //{
-                    //    var cityList = from member in dataSource
-                    //                   where !string.IsNullOrEmpty(member.City.Trim()) && (member.Country.Equals(country))
-                    //                   orderby member.City ascending
-                    //                   select member.City;
-                    //    cityList = cityList.Prepend("All");
-                    //    cityList = cityList.Distinct();
-
-                    //    cityDictionary.Add(country, cityList);
-                    //}
-
-                    //countryList = countryList.Prepend("All");
-
-                    //if (dataSource.Count() > 0)
-                    //{
-                    //    countrySource = new BindingSource();
-                    //    countrySource.DataSource = countryList;
-                    //    cboCountry.DataSource = null;
-                    //    cboCountry.DataSource = countrySource;
-
-                    //    cboSearchCity.DataBindings.Clear();
-                    //    //citySource = new BindingSource();
-                    //    //citySource.DataSource = cityList;
-                    //    //cboSearchCity.DataSource = null;
-                    //    //cboSearchCity.DataSource = citySource;
-                    //}
-                }
-
+                
                 txtProductID.DataBindings.Clear();
                 txtProductName.DataBindings.Clear();
                 txtCategory.DataBindings.Clear();
@@ -239,14 +192,12 @@ namespace SalesWinApp.ProductUI
         private void LoadFullList()
         {
             search = false;
-            filter = false;
             var products = productRepository.GetProductsList(!LoginMember.Fullname.Equals("Admin"));
             var productList = from product in products
                               orderby product.ProductName descending
                               select product;
             dataSource = productList;
             searchResult = productList;
-            filterResult = productList;
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -257,7 +208,6 @@ namespace SalesWinApp.ProductUI
                 dgvProductList.Enabled = true;
                 btnLoad.Enabled = true;
                 grSearch.Enabled = true;
-                grFilter.Enabled = true;
                 LoadFullList();
 
                 LoadProductList();
@@ -280,7 +230,6 @@ namespace SalesWinApp.ProductUI
             btnNew.Enabled = false;
             dgvProductList.Enabled = false;
             grSearch.Enabled = false;
-            grFilter.Enabled = false;
 
             btnLoad.Enabled = true;
             if (!LoginMember.Fullname.Equals("Admin"))
@@ -410,80 +359,9 @@ namespace SalesWinApp.ProductUI
             }
         }
 
-        private void btnFilter_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string start = txtFrom.Text;
-                string end = txtTo.Text;
-                if (string.IsNullOrEmpty(start) && string.IsNullOrEmpty(end))
-                {
-                    LoadFullList();
-                    LoadProductList();
-                }
-                else
-                {
-                    if (rdUnitPrice.Checked)
-                    {
-                        decimal from = decimal.Parse(start);
-                        decimal to = decimal.Parse(end);
-                        if (from > to)
-                        {
-                            decimal temp = from;
-                            from = to;
-                            to = temp;
-                        }
-                        IEnumerable<Product> searchResult;
-                        if (search)
-                        {
-                            searchResult = productRepository.SearchProduct(from, to, this.searchResult);
-                        }
-                        else
-                        {
-                            searchResult = productRepository.SearchProduct(from, to);
-                        }
-                        if (searchResult.Any())
-                        {
-                            filterResult = searchResult;
-                            filter = true;
-                            LoadProductList();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                    else if (rdUnitsInStock.Checked)
-                    {
-                        int from = int.Parse(start);
-                        int to = int.Parse(end);
-                        IEnumerable<Product> searchResult;
-                        if (search)
-                        {
-                            searchResult = productRepository.SearchProduct(from, to, this.searchResult);
-                        }
-                        else
-                        {
-                            searchResult = productRepository.SearchProduct(from, to);
-                        }
-                        if (searchResult.Any())
-                        {
-                            filterResult = searchResult;
-                            filter = true;
-                            LoadProductList();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }
