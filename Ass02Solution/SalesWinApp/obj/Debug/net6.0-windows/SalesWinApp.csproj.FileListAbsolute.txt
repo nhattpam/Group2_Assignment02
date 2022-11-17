@@ -467,3 +467,10 @@ F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Deb
 D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
 D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCart.resources
 D:\SWR\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.CategoryUI.frmAddCategory.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrderDetails.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrdersManagement.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCart.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductDetail.resources
+C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductsManagement.resources
