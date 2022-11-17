@@ -61,7 +61,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(113, 23);
             this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "&Update Item";
+            this.btnUpdate.Text = "&Update Cart";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // txtTotal
@@ -77,7 +77,7 @@
             this.lbTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbTotal.Location = new System.Drawing.Point(17, 164);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(33, 15);
+            this.lbTotal.Size = new System.Drawing.Size(32, 15);
             this.lbTotal.TabIndex = 16;
             this.lbTotal.Text = "Total";
             // 
@@ -151,7 +151,7 @@
             this.Controls.Add(this.lbProductName);
             this.Name = "frmViewCartDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Update Cart Item";
+            this.Text = "Update Cart";
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnitPrice)).EndInit();
             this.ResumeLayout(false);

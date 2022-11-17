@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbNote = new System.Windows.Forms.Label();
             this.numUnitPrice = new System.Windows.Forms.NumericUpDown();
             this.numUnitsInStock = new System.Windows.Forms.NumericUpDown();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -46,17 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUnitPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUnitsInStock)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbNote
-            // 
-            this.lbNote.AutoSize = true;
-            this.lbNote.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lbNote.Location = new System.Drawing.Point(136, 261);
-            this.lbNote.Name = "lbNote";
-            this.lbNote.Size = new System.Drawing.Size(178, 13);
-            this.lbNote.TabIndex = 31;
-            this.lbNote.Text = "Enter Quantity you want to order < ";
-            this.lbNote.Visible = false;
             // 
             // numUnitPrice
             // 
@@ -185,7 +173,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 334);
-            this.Controls.Add(this.lbNote);
             this.Controls.Add(this.numUnitPrice);
             this.Controls.Add(this.numUnitsInStock);
             this.Controls.Add(this.txtWeight);
@@ -213,8 +200,6 @@
         }
 
         #endregion
-
-        private Label lbNote;
         private NumericUpDown numUnitPrice;
         private NumericUpDown numUnitsInStock;
         private TextBox txtWeight;

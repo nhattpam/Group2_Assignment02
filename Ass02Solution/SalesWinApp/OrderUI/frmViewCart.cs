@@ -242,5 +242,10 @@ namespace SalesWinApp.OrderUI
                 }
             }
         }
+
+        private void lbOrderTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,7 +45,7 @@
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Location = new System.Drawing.Point(407, 132);
+            this.btnCheckOut.Location = new System.Drawing.Point(238, 282);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(108, 23);
             this.btnCheckOut.TabIndex = 23;
@@ -57,15 +57,16 @@
             // 
             this.lbOrderTotal.AutoSize = true;
             this.lbOrderTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbOrderTotal.Location = new System.Drawing.Point(13, 136);
+            this.lbOrderTotal.Location = new System.Drawing.Point(21, 227);
             this.lbOrderTotal.Name = "lbOrderTotal";
             this.lbOrderTotal.Size = new System.Drawing.Size(76, 15);
             this.lbOrderTotal.TabIndex = 22;
             this.lbOrderTotal.Text = "Order Total: ";
+            this.lbOrderTotal.Click += new System.EventHandler(this.lbOrderTotal_Click);
             // 
             // btnRemoveFromCart
             // 
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(266, 132);
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(97, 282);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
             this.btnRemoveFromCart.Size = new System.Drawing.Size(118, 23);
             this.btnRemoveFromCart.TabIndex = 21;
@@ -76,7 +77,7 @@
             // txtVCTotal
             // 
             this.txtVCTotal.Enabled = false;
-            this.txtVCTotal.Location = new System.Drawing.Point(354, 72);
+            this.txtVCTotal.Location = new System.Drawing.Point(105, 159);
             this.txtVCTotal.Name = "txtVCTotal";
             this.txtVCTotal.Size = new System.Drawing.Size(161, 23);
             this.txtVCTotal.TabIndex = 20;
@@ -84,7 +85,7 @@
             // txtVCPrice
             // 
             this.txtVCPrice.Enabled = false;
-            this.txtVCPrice.Location = new System.Drawing.Point(354, 26);
+            this.txtVCPrice.Location = new System.Drawing.Point(105, 113);
             this.txtVCPrice.Name = "txtVCPrice";
             this.txtVCPrice.Size = new System.Drawing.Size(161, 23);
             this.txtVCPrice.TabIndex = 19;
@@ -92,7 +93,7 @@
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
-            this.lbTotal.Location = new System.Drawing.Point(302, 75);
+            this.lbTotal.Location = new System.Drawing.Point(53, 162);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(32, 15);
             this.lbTotal.TabIndex = 18;
@@ -101,7 +102,7 @@
             // lbVCPrice
             // 
             this.lbVCPrice.AutoSize = true;
-            this.lbVCPrice.Location = new System.Drawing.Point(301, 29);
+            this.lbVCPrice.Location = new System.Drawing.Point(52, 116);
             this.lbVCPrice.Name = "lbVCPrice";
             this.lbVCPrice.Size = new System.Drawing.Size(33, 15);
             this.lbVCPrice.TabIndex = 17;
@@ -118,7 +119,7 @@
             // lbQuantity
             // 
             this.lbQuantity.AutoSize = true;
-            this.lbQuantity.Location = new System.Drawing.Point(13, 75);
+            this.lbQuantity.Location = new System.Drawing.Point(33, 75);
             this.lbQuantity.Name = "lbQuantity";
             this.lbQuantity.Size = new System.Drawing.Size(53, 15);
             this.lbQuantity.TabIndex = 15;
@@ -144,20 +145,20 @@
             // dgvCart
             // 
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCart.Location = new System.Drawing.Point(13, 171);
+            this.dgvCart.Location = new System.Drawing.Point(366, 12);
             this.dgvCart.MultiSelect = false;
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.ReadOnly = true;
             this.dgvCart.RowTemplate.Height = 25;
             this.dgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCart.Size = new System.Drawing.Size(502, 228);
+            this.dgvCart.Size = new System.Drawing.Size(520, 293);
             this.dgvCart.TabIndex = 12;
             // 
             // frmViewCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 424);
+            this.ClientSize = new System.Drawing.Size(898, 317);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.lbOrderTotal);
             this.Controls.Add(this.btnRemoveFromCart);
