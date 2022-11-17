@@ -31,15 +31,6 @@ namespace DataAccess.Repository.MemberRepo
 
         public void UpdateMember(Member member) => MemberDAO.Instance.Update(member);
 
-        public IEnumerable<Member> SearchMemberByCountry(string country, IEnumerable<Member> searchList)
-        {
-            return MemberDAO.Instance.FilterMemberByCountry(country, searchList);
-        }
-
-        public IEnumerable<Member> SearchMemberByCity(string country, string city, IEnumerable<Member> searchList)
-        {
-            return MemberDAO.Instance.FilterMemberByCity(country, city, searchList);
-        }
 
         public Member GetMember(int memberId)
         {

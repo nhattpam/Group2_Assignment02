@@ -106,10 +106,7 @@ namespace SalesWinApp.MemberUI
             MessageBox.Show("OK");
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -151,6 +148,12 @@ namespace SalesWinApp.MemberUI
             {
                 MessageBox.Show(ex.Message, "Update member", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            frmMembersManagement frmMembersManagement = new frmMembersManagement();
+            frmMembersManagement.Show();
         }
     }
 }

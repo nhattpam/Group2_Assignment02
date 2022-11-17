@@ -25,7 +25,7 @@ namespace DataAccess.DAO
             {
                 lock (instanceLock)
                 {
-                    if (instance == null)
+                    if (instance == null) //neu instance = null thi khoa lai tao ra tk moi, nguoc lai tra ve instance do
                     {
                         instance = new CartDAO();
                     }

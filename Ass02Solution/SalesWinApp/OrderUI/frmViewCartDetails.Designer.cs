@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewCartDetails));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -77,7 +78,7 @@
             this.lbTotal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbTotal.Location = new System.Drawing.Point(17, 164);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(32, 15);
+            this.lbTotal.Size = new System.Drawing.Size(33, 15);
             this.lbTotal.TabIndex = 16;
             this.lbTotal.Text = "Total";
             // 
@@ -138,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(299, 257);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -149,6 +151,7 @@
             this.Controls.Add(this.lbQuantity);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.lbProductName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmViewCartDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Cart";

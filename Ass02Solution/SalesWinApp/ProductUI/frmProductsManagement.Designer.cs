@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductsManagement));
             this.txtUnitsInStock = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
@@ -50,8 +51,10 @@
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.lbProductID = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUnitsInStock
@@ -131,6 +134,7 @@
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lbSearch
             // 
@@ -262,11 +266,24 @@
             this.dgvProductList.TabIndex = 61;
             this.dgvProductList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellDoubleClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::SalesWinApp.Properties.Resources.logo_fpt_shop;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 358);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmProductsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(1025, 502);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.txtUnitsInStock);
             this.Controls.Add(this.txtUnitPrice);
@@ -284,6 +301,7 @@
             this.Controls.Add(this.lbMemberName);
             this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.lbProductID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmProductsManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -292,6 +310,7 @@
             this.grSearch.ResumeLayout(false);
             this.grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +340,6 @@
         private TextBox txtProductID;
         private Label lbProductID;
         private DataGridView dgvProductList;
+        private PictureBox pictureBox1;
     }
 }

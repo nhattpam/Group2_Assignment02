@@ -220,48 +220,6 @@ namespace DataAccess.DAO
             return searchResult;
         }
 
-        public IEnumerable<Member> FilterMemberByCountry(string country, IEnumerable<Member> searchList = null)
-        {
-            IEnumerable<Member> searchResult = null;
-            if (searchList != null)
-            {
-                var memberSearch = from member in searchList
-                                   where member.Country == country
-                                   select member;
-                if (country.Equals("All"))
-                {
-                    memberSearch = from member in searchList
-                                   select member;
-                }
-                searchResult = memberSearch;
-            }
-            else
-            {
-                var context = new SalesManagementContext();
-            }
-
-            return searchResult;
-        }
-
-        public IEnumerable<Member> FilterMemberByCity(string country, string city, IEnumerable<Member> searchList)
-        {
-            IEnumerable<Member> searchResult = null;
-            var memberSearch = from member in searchList
-                               where member.City == city
-                               select member;
-            if (city.Equals("All"))
-            {
-                memberSearch = from member in searchList
-                               where member.Country == country
-                               select member;
-                if (country.Equals("All"))
-                {
-                    memberSearch = from member in searchList
-                                   select member;
-                }
-            }
-            searchResult = memberSearch;
-            return searchResult;
-        }
+        
     }
 }

@@ -373,7 +373,6 @@ F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\bin\Deb
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\bin\Debug\net6.0-windows\DataValidation.pdb
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.MemberUI.frmMemberDetails.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.MemberUI.frmMembersManagement.resources
-F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrderDetails.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmOrdersManagement.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductDetail.resources
 F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductsManagement.resources
@@ -474,3 +473,4 @@ C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass0
 C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.OrderUI.frmViewCartDetails.resources
 C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductDetail.resources
 C:\Users\Admin\Desktop\K16_FPT_SE161548\MATERIALS_FPT\SEMESTER_5\PRN211\GIT\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.ProductUI.frmProductsManagement.resources
+F:\FPT_SUBJECTS\PRN211\GIT\Group2_Assignment02\Ass02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.Properties.Resources.resources

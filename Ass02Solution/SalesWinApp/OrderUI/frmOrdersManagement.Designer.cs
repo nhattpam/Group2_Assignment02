@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdersManagement));
             this.grSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.endDate = new System.Windows.Forms.DateTimePicker();
@@ -41,11 +42,12 @@
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lbOrderID = new System.Windows.Forms.Label();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
             this.txtMemberName = new System.Windows.Forms.TextBox();
             this.lbMember = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grSearch
@@ -119,7 +121,7 @@
             this.lbOrderTotal.AutoSize = true;
             this.lbOrderTotal.Location = new System.Drawing.Point(13, 92);
             this.lbOrderTotal.Name = "lbOrderTotal";
-            this.lbOrderTotal.Size = new System.Drawing.Size(65, 15);
+            this.lbOrderTotal.Size = new System.Drawing.Size(66, 15);
             this.lbOrderTotal.TabIndex = 13;
             this.lbOrderTotal.Text = "Order Total";
             // 
@@ -165,18 +167,8 @@
             this.dgvOrderList.ReadOnly = true;
             this.dgvOrderList.RowTemplate.Height = 25;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderList.Size = new System.Drawing.Size(413, 252);
+            this.dgvOrderList.Size = new System.Drawing.Size(785, 148);
             this.dgvOrderList.TabIndex = 8;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Location = new System.Drawing.Point(156, 431);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(122, 36);
-            this.btnExport.TabIndex = 14;
-            this.btnExport.Text = "Export Data";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // txtMemberName
             // 
@@ -195,11 +187,24 @@
             this.lbMember.TabIndex = 15;
             this.lbMember.Text = "Member";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::SalesWinApp.Properties.Resources.logo_fpt_shop;
+            this.pictureBox1.Location = new System.Drawing.Point(451, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(346, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmOrdersManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 484);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.ClientSize = new System.Drawing.Size(809, 329);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grSearch);
             this.Controls.Add(this.txtOrderTotal);
             this.Controls.Add(this.lbOrderTotal);
@@ -208,9 +213,9 @@
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.lbOrderID);
             this.Controls.Add(this.dgvOrderList);
-            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.txtMemberName);
             this.Controls.Add(this.lbMember);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOrdersManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orders Management";
@@ -218,6 +223,7 @@
             this.grSearch.ResumeLayout(false);
             this.grSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +244,8 @@
         private TextBox txtOrderID;
         private Label lbOrderID;
         private DataGridView dgvOrderList;
-        private Button btnExport;
         private TextBox txtMemberName;
         private Label lbMember;
+        private PictureBox pictureBox1;
     }
 }

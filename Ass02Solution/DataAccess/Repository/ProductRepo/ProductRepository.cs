@@ -38,16 +38,6 @@ namespace DataAccess.Repository.ProductRepo
             return ProductDAO.Instance.SearchProduct(name, searchList);
         }
 
-        public IEnumerable<Product> SearchProduct(int startUnit, int endUnit, IEnumerable<Product> searchList = null)
-        {
-            return ProductDAO.Instance.SearchProduct(startUnit, endUnit, searchList);
-        }
-
-        public IEnumerable<Product> SearchProduct(decimal startPrice, decimal endPrice, IEnumerable<Product> searchList = null)
-        {
-            return ProductDAO.Instance.SearchProduct(startPrice, endPrice, searchList);
-        }
-
         public void Update(Product product) => ProductDAO.Instance.Update(product);
     }
 }

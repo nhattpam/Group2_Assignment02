@@ -52,13 +52,7 @@ namespace SalesWinApp.Presenter
                                 act => act.MapFrom(src =>
                                     (productRepository.GetProduct(src.ProductId, null).UnitPrice) * (1 - Convert.ToDecimal(src.Discount)) * src.Quantity));
 
-            // Mapping Order to AdminOrderPresenter
-            //IMemberRepository memberRepository = new MemberRepository();
-            //CreateMap<Order, AdminOrderPresenter>()
-            //     .ForMember(des => des.OrderTotal,
-            //                    act => act.MapFrom(src => orderDetailRepository.GetOrderTotal(src.OrderId)))
-            //     .ForMember(des => des.MemberName,
-            //                    act => act.MapFrom(src => memberRepository.GetMember(src.MemberId)));
+           
 
         }
     }

@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SalesWinApp.ProductUI;
+using SalesWinApp.OrderUI;
 
 namespace SalesWinApp.MemberUI
 {
@@ -60,6 +61,19 @@ namespace SalesWinApp.MemberUI
             });
             mapper = config.CreateMapper();
         }
+        private void menuOrderMng_Click(object sender, EventArgs e)
+        {
+            frmOrdersManagement frmOrdersManagement = new frmOrdersManagement
+            {
+                LoginMember = this.LoginMember,
+                CartRepository = this.CartRepository,
+                MemberRepository = this.memberRepository
+            };
+            frmOrdersManagement.Closed += (s, args) => this.Close();
+            this.Hide();
+            frmOrdersManagement.Show();
+        }
+
         private void CreateMainMenu()
         {
             MenuStrip mainMenu = new MenuStrip();
@@ -89,7 +103,7 @@ namespace SalesWinApp.MemberUI
             menuOrderMng.ShortcutKeys = (Keys)((Keys.Control) | Keys.O);
 
             menuProductMng.Click += new EventHandler(menuProductMng_Click);
-            //menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
+            menuOrderMng.Click += new EventHandler(menuOrderMng_Click);
             menuExit.Click += new EventHandler(menuExit_Click);
         }
 

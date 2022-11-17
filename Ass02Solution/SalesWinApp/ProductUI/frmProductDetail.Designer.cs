@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductDetail));
             this.numUnitPrice = new System.Windows.Forms.NumericUpDown();
             this.numUnitsInStock = new System.Windows.Forms.NumericUpDown();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -172,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(332, 334);
             this.Controls.Add(this.numUnitPrice);
             this.Controls.Add(this.numUnitsInStock);
@@ -187,6 +189,7 @@
             this.Controls.Add(this.lbCategory);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.lbProductID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProductDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

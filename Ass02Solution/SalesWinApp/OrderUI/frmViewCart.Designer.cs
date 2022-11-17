@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewCart));
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.lbOrderTotal = new System.Windows.Forms.Label();
             this.btnRemoveFromCart = new System.Windows.Forms.Button();
@@ -95,7 +96,7 @@
             this.lbTotal.AutoSize = true;
             this.lbTotal.Location = new System.Drawing.Point(53, 162);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(32, 15);
+            this.lbTotal.Size = new System.Drawing.Size(33, 15);
             this.lbTotal.TabIndex = 18;
             this.lbTotal.Text = "Total";
             // 
@@ -158,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(898, 317);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.lbOrderTotal);
@@ -171,6 +173,7 @@
             this.Controls.Add(this.txtVCProductName);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.dgvCart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmViewCart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Cart";

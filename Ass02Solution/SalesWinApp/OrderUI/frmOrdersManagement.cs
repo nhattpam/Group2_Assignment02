@@ -25,7 +25,6 @@ namespace SalesWinApp.OrderUI
         public ICartRepository CartRepository { get; set; }
         private IOrderRepository orderRepository = new OrderRepository();
         private IEnumerable<OrderPresenter> orderPresenters = new List<OrderPresenter>();
-        //private IEnumerable<AdminOrderPresenter> adminOrderPresenters = new List<AdminOrderPresenter>();
 
         BindingSource source;
         private IMapper mapper;
@@ -200,26 +199,6 @@ namespace SalesWinApp.OrderUI
             }
         }
 
-        private OrderPresenter GetOrder()
-        {
-            OrderPresenter orderPresenter = null;
-            try
-            {
-                orderPresenter = new OrderPresenter()
-                {
-                    OrderID = int.Parse(txtOrderID.Text),
-                    MemberName = txtMemberName.Text,
-                    OrderDate = DateTime.Parse(txtOrderDate.Text),
-                    OrderTotal = decimal.Parse(txtOrderTotal.Text)
-                };
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            return orderPresenter;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -249,9 +228,6 @@ namespace SalesWinApp.OrderUI
             }
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }

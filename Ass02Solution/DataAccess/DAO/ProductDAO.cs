@@ -220,60 +220,6 @@ namespace DataAccess.DAO
             }
             return searchResult;
         }
-
-        public IEnumerable<Product> SearchProduct(int startUnit, int endUnit, IEnumerable<Product> searchList = null)
-        {
-            IEnumerable<Product> searchResult = null;
-
-            try
-            {
-                if (searchList == null)
-                {
-                    var context = new SalesManagementContext();
-                    searchResult = context.Products
-                                    .Where(pro => pro.UnitsInStock >= startUnit && pro.UnitsInStock <= endUnit)
-                                    .Include(pro => pro.Category);
-                }
-                else
-                {
-                    searchResult = searchList.Where(pro => pro.UnitsInStock >= startUnit && pro.UnitsInStock <= endUnit);
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-            return searchResult;
-        }
-
-        public IEnumerable<Product> SearchProduct(decimal startPrice, decimal endPrice, IEnumerable<Product> searchList = null)
-        {
-            IEnumerable<Product> searchResult = null;
-
-            try
-            {
-                if (searchList == null)
-                {
-                    var context = new SalesManagementContext();
-                    searchResult = context.Products
-                                        .Where(pro => pro.UnitPrice >= startPrice && pro.UnitPrice <= endPrice)
-                                        .Include(pro => pro.Category);
-                }
-                else
-                {
-                    searchResult = searchList.Where(pro => pro.UnitPrice >= startPrice && pro.UnitPrice <= endPrice);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-            return searchResult;
-        }
+        
     }
 }

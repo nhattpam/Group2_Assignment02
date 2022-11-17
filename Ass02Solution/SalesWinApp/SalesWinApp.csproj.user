@@ -16,9 +16,6 @@
     <Compile Update="MemberUI\frmMembersManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OrderUI\frmOrderDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="OrderUI\frmOrdersManagement.cs">
       <SubType>Form</SubType>
     </Compile>

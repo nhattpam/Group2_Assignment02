@@ -85,8 +85,6 @@ namespace SalesWinApp.ProductUI
                     numUnitsInStock.Value = 1;
                     numUnitsInStock.Minimum = 1;
                     numUnitsInStock.Maximum = ProductInfo.UnitsInStock;
-                    lbNote.Visible = true;
-                    lbNote.Text += $"{ProductInfo.UnitsInStock + 1}\nDefault is 1";
                 }
             }
             catch (Exception ex)

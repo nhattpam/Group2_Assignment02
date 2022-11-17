@@ -361,7 +361,73 @@ namespace SalesWinApp.ProductUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ProductPresenter productPresenter = GetProductInfo();
+                if (MessageBox.Show($"Delete product: " +
+                    
+                    $"{productPresenter.ProductName}"
+                    , "Delete",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    orderDetailRepository.DeleteByProduct(productPresenter.ProductId);
+                    productRepository.Delete(productPresenter.ProductId);
+                    search = false;
+                    LoadFullList();
+                    LoadProductList();
+                    MessageBox.Show("Delete successfully!!", "Delete Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Delete Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string searchValue = txtSearchValue.Text;
+                if (radioByID.Checked)
+                {
+                    int searchID = int.Parse(searchValue);
+                    Product product = productRepository.GetProduct(searchID);
+                    if (product != null)
+                    {
+                        IEnumerable<Product> searchResult = new List<Product>() { product };
+                        dataSource = searchResult;
+                        this.searchResult = searchResult;
+                        search = true;
+                        LoadProductList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+
+                    }
+                }
+                else if (radioByName.Checked)
+                {
+                    string searchName = searchValue;
+                    IEnumerable<Product> searchResult = productRepository.SearchProduct(searchName);
+                    if (searchResult.Any())
+                    {
+                        dataSource = searchResult;
+                        this.searchResult = searchResult;
+                        search = true;
+                        LoadProductList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No result found!", "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

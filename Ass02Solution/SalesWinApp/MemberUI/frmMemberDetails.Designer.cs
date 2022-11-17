@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMemberDetails));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd1 = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.btnCancel.TabIndex = 45;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -70,11 +72,11 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAdd
+            // btnAdd1
             // 
             this.btnAdd1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAdd1.Location = new System.Drawing.Point(39, 362);
-            this.btnAdd1.Name = "btnAdd";
+            this.btnAdd1.Name = "btnAdd1";
             this.btnAdd1.Size = new System.Drawing.Size(94, 23);
             this.btnAdd1.TabIndex = 43;
             this.btnAdd1.Text = "&Add";
@@ -214,6 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(343, 413);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -234,6 +237,7 @@
             this.Controls.Add(this.lbMemberName);
             this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.lbMemberID);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMemberDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Details";
